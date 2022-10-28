@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Section } from './Section/Section';
-import { Notificaion } from './Notificaion/Notificaion';
+import { Notificaion } from './Notification/Notification';
 import { Container } from '../utils/Container.styled';
 
 export class App extends Component {
@@ -13,6 +13,7 @@ export class App extends Component {
   };
 
   onOptionClick = e => {
+    console.log(this.state);
     this.setState(prevState => ({ [e]: (prevState[e] += 1) }));
   };
 
